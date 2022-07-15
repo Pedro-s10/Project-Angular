@@ -12,5 +12,5 @@ export class AgentsComponent{
     id: 1,
     name: 'Sova',
   };
-  agents_I = AGENTS
+  agents_list = AGENTS
 }
