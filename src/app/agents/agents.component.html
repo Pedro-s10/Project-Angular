@@ -1,4 +1,14 @@
-<h2>{{ agents.name | uppercase }} </h2>
+<h2>My Agents</h2>
+
+<ul>
+  <li *ngFor="let agents of agents_list" (click)="onSelect(agents)">
+    <span>{{agents.id}}</span> {{agents.name}}
+  </li>
+
+</ul>
+
+
+<h2>{{ agents.name | uppercase }} Details</h2>
 <div><span>id:</span>{{ agents.id }}</div>
 <div><span>name:</span>{{ agents.name }}</div>
 
