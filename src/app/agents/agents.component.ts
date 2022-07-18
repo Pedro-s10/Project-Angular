@@ -8,10 +8,6 @@ import { AGENTS } from '../mock-agents';
   styleUrls: ['./agents.component.scss'],
 })
 export class AgentsComponent {
-  agents: Agent = {
-    id: 1,
-    name: 'Sova',
-  };
   agents_list = AGENTS;
   selectedAgent?: Agent;
 
