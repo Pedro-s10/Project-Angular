@@ -5,12 +5,17 @@ import { AGENTS } from '../mock-agents';
 @Component({
   selector: 'app-agents',
   templateUrl: './agents.component.html',
-  styleUrls: ['./agents.component.scss']
+  styleUrls: ['./agents.component.scss'],
 })
-export class AgentsComponent{
+export class AgentsComponent {
   agents: Agent = {
     id: 1,
     name: 'Sova',
   };
-  agents_list = AGENTS
+  agents_list = AGENTS;
+  selectedAgent?: Agent;
+
+  onSelect(agents: Agent): void {
+    this.selectedAgent = agents;
+  }
 }
