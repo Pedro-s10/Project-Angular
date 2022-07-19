@@ -18,7 +18,8 @@ export class AgentsComponent implements OnInit{
   }
 
   getAgents(): void {
-    this.agents_list = this.agentService.getAgents();
+    this.agentService.getAgents().subscribe(agents1 =>
+      this.agents_list = agents1);
   }
 
   onSelect(agents: Agent): void {
