@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Agent } from '../agent.model';
-import {AgentService } from '../agent.service'
+import { AgentService } from '../agent.service';
 
 @Component({
   selector: 'app-agents',
   templateUrl: './agents.component.html',
   styleUrls: ['./agents.component.scss'],
 })
-export class AgentsComponent implements OnInit{
+export class AgentsComponent implements OnInit {
   agents_list: Agent[] = [];
   selectedAgent?: Agent;
 
@@ -18,8 +18,9 @@ export class AgentsComponent implements OnInit{
   }
 
   getAgents(): void {
-    this.agentService.getAgents().subscribe(agents1 =>
-      this.agents_list = agents1);
+    this.agentService
+      .getAgents()
+      .subscribe((agents1) => (this.agents_list = agents1));
   }
 
   onSelect(agents: Agent): void {
