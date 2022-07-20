@@ -1,10 +1,14 @@
 <div *ngIf="agentd">
   <h2>Details: {{ agentd.name | uppercase }}</h2>
-  <div><span>id:</span>{{ agentd.id }}</div>
-  <div><span>name:</span>{{ agentd.name }}</div>
+  <div><span>ID: </span>{{ agentd.id }}</div>
+  <div><span>Agent: </span>{{ agentd.name }}</div>
+  <div><span>Name: </span>{{ agentd.name_c }}</div>
+  <div><span>Origin: </span>{{ agentd.origin }}</div>
+  <div><span>Function: </span>{{ agentd.function }}</div>
 
+  <br />
   <div>
-    <label for="name">Agent name: </label>
+    <label for="name">Edit name: </label>
     <input id="name" [(ngModel)]="agentd.name" placeholder="name" type="text" />
   </div>
 </div>
