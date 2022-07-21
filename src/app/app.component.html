@@ -1,8 +1,23 @@
-<mat-toolbar color="warn">
-  <span> {{title}} </span>
+<!--
+  matTooltip = ao passar o cursor do mouse em cima do icon/button irá aparece a mensagem "Agents"
+  routerLink = é a rota para qual o botão irá levar ao ser clicado
+  -->
+
+<mat-toolbar color="warn" id="headerColor">
+  <span> {{ title }} </span>
+
+  <span fxFlex></span>
+  <button
+    mat-icon-button
+    caria-label="Agents list"
+    routerLink="/agents"
+    matTooltip="Agents"
+  >
+    <mat-icon>sports_martial_arts</mat-icon>
+  </button>
 </mat-toolbar>
 
 <div class="content">
-  <app-agents></app-agents>
+  <router-outlet></router-outlet>
   <app-messages></app-messages>
 </div>
