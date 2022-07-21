@@ -7,6 +7,16 @@
   <span> {{ title }} </span>
 
   <span fxFlex></span>
+
+  <button
+  mat-icon-button
+  caria-label="dashboard"
+  routerLink="/dashboard"
+  matTooltip="dashboard"
+>
+  <mat-icon>dashboard</mat-icon>
+</button>
+
   <button
     mat-icon-button
     caria-label="Agents list"
@@ -17,7 +27,7 @@
   </button>
 </mat-toolbar>
 
-<div class="content">
+<div class="content" fxLayoutGap="12px">
   <router-outlet></router-outlet>
   <app-messages></app-messages>
 </div>
