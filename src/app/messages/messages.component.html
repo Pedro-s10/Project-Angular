@@ -1,4 +1,3 @@
-<br />
 <mat-accordion *ngIf="messageService.getMessages().length">
   <mat-expansion-panel>
     <mat-expansion-panel-header>
@@ -10,7 +9,6 @@
     <div *ngFor="let message of messageService.getMessages()">
       {{ message }}
     </div>
-    <br />
     <button mat-raised-button color="warn" (click)="messageService.clear()">
       Clear
     </button>

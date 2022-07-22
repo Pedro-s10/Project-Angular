@@ -1,12 +1,15 @@
-<h2>Dashboard</h2>
+<h1>Dashboard</h1>
 <!-- <div fxLayout="row" fxLayoutGap="12px" fxLayoutAlign="space-between"> -->
 <div fxLayout="row"
 fxLayout.xs="column"
 fxLayoutGap="20px"
 fxLayoutAlign="center"
-
 >
-  <mat-card *ngFor="let agent of agentsdash">
+
+  <mat-card *ngFor="let agent of agentsdash"
+  routerLink="/agents/{{agent.id}}"
+  class="pointer"
+  >
     <mat-card-title>{{ agent.name }}</mat-card-title>
   </mat-card>
 </div>

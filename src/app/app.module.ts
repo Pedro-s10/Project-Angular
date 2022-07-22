@@ -15,11 +15,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
 
 
 @NgModule({
   declarations: [AppComponent, AgentsComponent, AgentDetailComponent, MessagesComponent, DashboardComponent],
-  imports: [BrowserModule, FormsModule, BrowserAnimationsModule, MatToolbarModule, MatButtonModule, MatExpansionModule, AppRoutingModule,MatIconModule, FlexLayoutModule, MatTooltipModule, MatCardModule],
+  imports: [BrowserModule, FormsModule, BrowserAnimationsModule, MatToolbarModule, MatButtonModule, MatExpansionModule, AppRoutingModule,MatIconModule, FlexLayoutModule, MatTooltipModule, MatCardModule, MatListModule],
   providers: [],
   bootstrap: [AppComponent],
 })

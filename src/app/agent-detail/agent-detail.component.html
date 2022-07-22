@@ -1,5 +1,5 @@
 <div *ngIf="agentd">
-  <h2>Details: {{ agentd.name | uppercase }}</h2>
+  <h1>Details: {{ agentd.name | uppercase }}</h1>
   <div><span>ID: </span>{{ agentd.id }}</div>
   <div><span>Agent: </span>{{ agentd.name }}</div>
   <div><span>Name: </span>{{ agentd.name_c }}</div>
@@ -11,4 +11,6 @@
     <label for="name">Edit name: </label>
     <input id="name" [(ngModel)]="agentd.name" placeholder="name" type="text" />
   </div>
+
+  <button mat-raised-button (click)="back()">Back</button>
 </div>
