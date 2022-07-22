@@ -1,16 +1,49 @@
 <div *ngIf="agentd">
-  <h1>Details: {{ agentd.name | uppercase }}</h1>
-  <div><span>ID: </span>{{ agentd.id }}</div>
-  <div><span>Agent: </span>{{ agentd.name }}</div>
-  <div><span>Name: </span>{{ agentd.name_c }}</div>
-  <div><span>Origin: </span>{{ agentd.origin }}</div>
-  <div><span>Function: </span>{{ agentd.function }}</div>
 
-  <br />
-  <div>
-    <label for="name">Edit name: </label>
-    <input id="name" [(ngModel)]="agentd.name" placeholder="name" type="text" />
-  </div>
 
-  <button mat-raised-button (click)="back()">Back</button>
+  <mat-card >
+    <h1 id="FontFamilyDetails">Details: {{ agentd.name | uppercase }}</h1>
+    <mat-card-content fxLayout="Column">
+      <mat-form-field appearance="fill" >
+        <mat-label class="colorTextDetails">ID</mat-label>
+        <input class="colorTextDetails" matInput disabled value="{{ agentd.id }} ">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+      <mat-label class="colorTextDetails">AGENT</mat-label>
+        <input class="colorTextDetails" matInput id="name"
+        [(ngModel)]="agentd.name"
+        placeholder="name"
+        type="text">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+      <mat-label class="colorTextDetails">NAME</mat-label>
+        <input class="colorTextDetails" matInput disabled value="{{ agentd.name_c }}">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+      <mat-label class="colorTextDetails" >ORIGIN</mat-label>
+        <input class="colorTextDetails" matInput disabled value="{{ agentd.origin }}">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+      <mat-label class="colorTextDetails">FUNCTION</mat-label>
+        <input class="colorTextDetails" matInput disabled value="{{ agentd.function }}">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label class="colorTextDetails" >STAFF</mat-label>
+          <input class="colorTextDetails" matInput disabled value="{{ agentd.staff }}">
+        </mat-form-field>
+
+
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="back()">Back</button>
+    </mat-card-actions>
+  </mat-card>
+
+
 </div>

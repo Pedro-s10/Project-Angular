@@ -9,6 +9,7 @@ import { AgentService } from '../agent.service';
   styleUrls: ['./agents.component.scss'],
 })
 export class AgentsComponent implements OnInit {
+  displayedColumns: string[] = ['id', 'name'];
   agents_list: Agent[] = [];
 
 

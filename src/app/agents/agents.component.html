@@ -1,12 +1,26 @@
 <h1>Agents</h1>
 
-<ul class="AGENTS">
-  <li
-    *ngFor="let agents of agents_list"
-    routerLink="/agents/{{agents.id}}"
-  >
-    <span>{{ agents.id }}:</span> {{ agents.name }}
-  </li>
-</ul>
+
+<mat-table [dataSource]="agents_list">
+  <!-- ID -->
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+  </ng-container>
+
+  <!-- NAME  -->
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef> AGENT </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+  </ng-container>
+
+  <!-- Header and Row Declarations -->
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"
+ [routerLink]="['/agents', row.id]"
+  ></mat-row>
+</mat-table>
+
+
 
 
