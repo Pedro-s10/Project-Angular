@@ -1,13 +1,12 @@
-<h2>Agents</h2>
+<h1>Agents</h1>
 
 <ul class="AGENTS">
   <li
     *ngFor="let agents of agents_list"
-    [class.selected]="agents === selectedAgent"
-    (click)="onSelect(agents)"
+    routerLink="/agents/{{agents.id}}"
   >
     <span>{{ agents.id }}:</span> {{ agents.name }}
   </li>
 </ul>
 
-<app-agent-detail [agentd]="selectedAgent"></app-agent-detail>
+
