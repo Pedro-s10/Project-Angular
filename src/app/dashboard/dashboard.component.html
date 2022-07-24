@@ -7,7 +7,7 @@ fxLayoutAlign="center"
 >
 
   <mat-card *ngFor="let agent of agentsdash"
-  routerLink="/agents/{{agent.id}}"
+  [routerLink]="['/agents', agent.id]"
   class="pointer"
   >
     <mat-card-title>{{ agent.name }}</mat-card-title>
