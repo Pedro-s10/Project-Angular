@@ -1,0 +1,23 @@
+<!--
+  matTooltip = ao passar o cursor do mouse em cima do icon/button irá aparece a mensagem "Agents"
+  routerLink = é a rota para qual o botão irá levar ao ser clicado
+  -->
+
+  <mat-toolbar color="warn" id="headerColor">
+    <span> {{ title }} </span>
+
+    <span fxFlex></span>
+
+    <button
+    aria-label="menuItem.toolTipText"
+    mat-icon-button
+    [matTooltip]="menuItem.toolTipText"
+    *ngFor="let menuItem of menuItems"
+    [routerLink]="[menuItem.routerLink]"
+  >
+    <mat-icon>{{ menuItem.icon }}</mat-icon>
+  </button>
+
+
+  </mat-toolbar>
+

@@ -5,18 +5,15 @@ import { AppComponent } from './app.component';
 import { AgentDetailComponent } from './agent-detail/agent-detail.component';
 import { AgentsComponent } from './agents/agents.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { MaterialModule } from './material/material.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     AgentsComponent,
     AgentDetailComponent,
-    MessagesComponent,
     DashboardComponent,
   ],
   imports: [
@@ -24,8 +21,7 @@ import { MaterialModule } from './material/material.module';
     FormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    FlexLayoutModule,
-    MaterialModule
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent],

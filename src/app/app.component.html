@@ -3,29 +3,7 @@
   routerLink = é a rota para qual o botão irá levar ao ser clicado
   -->
 
-<mat-toolbar color="warn" id="headerColor">
-  <span> {{ title }} </span>
-
-  <span fxFlex></span>
-
-  <button
-  mat-icon-button
-  caria-label="dashboard"
-  routerLink="/dashboard"
-  matTooltip="dashboard"
->
-  <mat-icon>dashboard</mat-icon>
-</button>
-
-  <button
-    mat-icon-button
-    caria-label="Agents list"
-    routerLink="/agents"
-    matTooltip="Agents"
-  >
-    <mat-icon>sports_martial_arts</mat-icon>
-  </button>
-</mat-toolbar>
+<app-toolbar [title]="title" [menuItems]="menuItems"></app-toolbar>
 
 <div class="content" fxLayoutGap="12px">
   <router-outlet></router-outlet>

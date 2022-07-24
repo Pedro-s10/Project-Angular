@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { AGENTS } from './mock-agents';
-import { Agent } from './agent.model';
+import { AGENTS } from '../services/mock-agents';
+import { Agent } from '../models/agent.model';
 import { Observable, of } from 'rxjs';
 import { MessageService } from './message.service';
 
