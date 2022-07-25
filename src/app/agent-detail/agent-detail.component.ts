@@ -1,8 +1,8 @@
 import { Location } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Agent } from '../agent.model';
-import { AgentService } from '../agent.service';
+import { Agent } from '../core/models/agent.model';
+import { AgentService } from '../core/services/agent.service';
 
 @Component({
   selector: 'app-agent-detail',
