@@ -3,12 +3,15 @@
   routerLink = é a rota para qual o botão irá levar ao ser clicado
   -->
 
-  <mat-toolbar color="warn" id="headerColor">
-    <span> {{ title }} </span>
+<mat-toolbar color="warn" id="headerColor">
+  <span>
+    <img src="../../../../assets/valorant-logo-4.png" width="30" height="30" />
+  </span>
+  <span id="title"> {{ title }} </span>
 
-    <span fxFlex></span>
+  <span fxFlex></span>
 
-    <button
+  <button
     aria-label="menuItem.toolTipText"
     mat-icon-button
     [matTooltip]="menuItem.toolTipText"
@@ -17,7 +20,4 @@
   >
     <mat-icon>{{ menuItem.icon }}</mat-icon>
   </button>
-
-
-  </mat-toolbar>
-
+</mat-toolbar>
