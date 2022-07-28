@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { DashboardModule } from '../dashboard/dashboard.module';
 import { AgentsRoutingModule } from './agents-routing.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -18,7 +19,8 @@ import { AgentsRoutingModule } from './agents-routing.module';
     CommonModule,
     FormsModule,
     MaterialModule,
-    AgentsRoutingModule
+    AgentsRoutingModule,
+    FlexLayoutModule
   ]
 })
 export class AgentsModule { }
